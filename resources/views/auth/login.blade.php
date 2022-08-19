@@ -92,8 +92,9 @@
                     class="form-control @error('email') is-invalid @enderror"
                     id="email"
                     name="email"
+                    value="{{ old('email') }}"
                     placeholder="Enter your email or username"
-                    autofocus
+                    required autocomplete="email" autofocus
                   />
                   @error('email')
                   <span class="invalid-feedback" role="alert">
@@ -114,10 +115,11 @@
                     <input
                       type="password"
                       id="password"
-                      class="form-control"
+                      class="form-control @error('password') is-invalid @enderror"
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
+                      required autocomplete="current-password"
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
